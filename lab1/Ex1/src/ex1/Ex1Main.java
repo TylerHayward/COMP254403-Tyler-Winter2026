@@ -44,7 +44,7 @@ public class Ex1Main {
         
         public void concatenate(DoublyLinkedList<E> M) {
             if (M == null || M.isEmpty()) return;
-            if (this == M) return; // safety
+            if (this == M) return; 
 
           
             Node<E> lastL = this.trailer.prev;
@@ -97,6 +97,6 @@ public class Ex1Main {
         L.concatenate(M);
 
         System.out.println("L after:  " + L);
-        System.out.println("M after:  " + M + " (should be empty)");
+        System.out.println("M after:  " + M );
     }
 }

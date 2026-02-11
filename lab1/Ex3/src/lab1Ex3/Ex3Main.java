@@ -28,24 +28,24 @@ public class Ex3Main {
         public void addLast(E e) {
             Node<E> newest = new Node<>(e, null);
             if (isEmpty()) {
-                newest.next = newest; // points to itself
+                newest.next = newest; 
                 tail = newest;
             } else {
-                newest.next = tail.next; // new points to head
-                tail.next = newest;      // old tail points to new
-                tail = newest;           // new becomes tail
+                newest.next = tail.next; 
+                tail.next = newest;      
+                tail = newest;           
             }
             size++;
         }
 
-        // === REQUIRED METHOD: clone the circular list (deep copy)
+        
         @Override
         public CircularlyLinkedList<E> clone() {
             CircularlyLinkedList<E> other = new CircularlyLinkedList<>();
             if (this.isEmpty()) return other;
 
-            // Walk size times starting from head
-            Node<E> walk = this.tail.next; // head
+            
+            Node<E> walk = this.tail.next; 
             for (int i = 0; i < this.size; i++) {
                 other.addLast(walk.element);
                 walk = walk.next;
@@ -78,7 +78,7 @@ public class Ex3Main {
         System.out.println("Original: " + c1);
         System.out.println("Clone:    " + c2);
 
-        // Prove it's a deep copy by changing original
+        
         c1.addLast("D");
         System.out.println("Original after add: " + c1);
         System.out.println("Clone stays same:   " + c2);
