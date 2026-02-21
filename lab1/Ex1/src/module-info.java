@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Lab1 {
+module TylerHayward_COMP256Lab3 {
 }
